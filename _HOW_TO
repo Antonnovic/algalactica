@@ -1,0 +1,177 @@
+🇪🇸 HowTo en Español – Evaluación económica de Algaláctica
+1. Objetivo de la app
+
+Esta aplicación te permite:
+
+Ver y ajustar todos los supuestos financieros (Tablas 1–7) de tu proyecto.
+
+Calcular automáticamente los resultados del proyecto (Tablas 8–11): estado de resultados, flujos de caja, punto de equilibrio, TIR, VAN, etc.
+
+Hacer una simulación Monte Carlo para ver el riesgo de la inversión.
+
+2. Cómo usarla – Paso a paso
+Paso 1 – Abrir la aplicación
+
+En la terminal, dentro de la carpeta del proyecto:
+
+streamlit run app.py
+
+
+Abre el enlace que aparece (normalmente http://localhost:8501).
+
+Paso 2 – Ajustar los supuestos (pestaña “Supuestos detallados (Tablas 1–7)”)
+
+Entra en la pestaña “Supuestos detallados (Tablas 1–7)”.
+
+Ahí verás las tablas que vienen de tu archivo costos_estimados.ods (Tablas 1–7).
+
+Solo los campos grises son editables en la interfaz (igual que en la hoja de cálculo).
+
+Inversión inicial y depreciación
+
+Costos variables y fijos
+
+Supuestos de volumen y precios
+
+Capital de trabajo, tasas, etc.
+
+Ajusta estos valores según el escenario que quieras analizar (por ejemplo, “escenario conservador”, “optimista”, etc.).
+
+Paso 3 – Calcular resultados (pestaña “Resultados (Tablas 8–11)”)
+
+Ve a la pestaña “Resultados (Tablas 8–11)”.
+
+Pulsa el botón “Calcular evaluación”.
+
+La app genera:
+
+Tabla 8 – Estado de resultados proyectado
+
+Tabla 9 – Flujos de caja del proyecto
+
+Tabla 10 – Punto de equilibrio (Break-even)
+
+Tabla 11 – Indicadores financieros clave (TIR, VAN, payback, etc.)
+
+Usa estas tablas para comparar con el formato del profesor / inversionistas.
+
+Paso 4 – Simulación de riesgo (pestaña “Monte Carlo”)
+
+Entra en la pestaña “Monte Carlo”.
+
+Define:
+
+Número de simulaciones (ej. 3 000)
+
+Desviación de volúmenes [%]
+
+Desviación de precios [%]
+
+Ejecuta la simulación: la app muestra histogramas de:
+
+TIR simulada
+
+VAN simulado
+
+Con esto puedes responder preguntas tipo:
+
+“¿Con qué probabilidad la TIR cae por debajo del X %?”
+
+“¿Cuál es el VAN en el percentil 5 / 50 / 95?”
+
+3. Consejos prácticos
+
+Cambia solo una familia de supuestos a la vez (primero volúmenes, luego precios, etc.) para entender el impacto.
+
+Anota al lado (en tus notas o en un campo de comentarios) el nombre del escenario: “Base”, “Con ampliación año 3”, “Crisis de precios”, etc.
+
+Si algo explota numéricamente, respira hondo: suele ser un volumen = 0 o un precio = 0 donde no debería 😄
+
+🇬🇧 HowTo in English – Economic Evaluation of Algaláctica
+1. What this app does
+
+The app helps you to:
+
+View and edit all financial assumptions (Tables 1–7) from your ODS model.
+
+Automatically compute project results (Tables 8–11): P&L, cash flows, break-even, NPV, IRR, etc.
+
+Run a Monte Carlo simulation on volumes and prices to see risk and uncertainty.
+
+2. How to use it – Step by step
+Step 1 – Start the app
+
+In your terminal, inside the project folder:
+
+streamlit run app.py
+
+
+Open the link shown in the console (usually http://localhost:8501).
+
+Step 2 – Set your assumptions (“Supuestos detallados (Tablas 1–7)” tab)
+
+Go to the “Supuestos detallados (Tablas 1–7)” tab.
+
+You’ll see the tables loaded from costos_estimados.ods (Tables 1–7).
+
+Only the grey cells are editable in the interface – just like in your spreadsheet:
+
+Initial investment & depreciation
+
+Variable and fixed costs
+
+Volumes and prices
+
+Working capital, discount rate, etc.
+
+Adjust these inputs to define the scenario you want to test (base, conservative, optimistic…).
+
+Step 3 – Get the results (“Resultados (Tablas 8–11)” tab)
+
+Switch to the “Resultados (Tablas 8–11)” tab.
+
+Click the “Calcular evaluación” button.
+
+The app will display:
+
+Table 8 – Projected income statement
+
+Table 9 – Project cash flows
+
+Table 10 – Break-even point
+
+Table 11 – Key financial indicators (IRR, NPV, payback, etc.)
+
+Use these tables as your clean, structured output for professors, partners, or investors.
+
+Step 4 – Risk analysis (“Monte Carlo” tab)
+
+Open the “Monte Carlo” tab.
+
+Choose:
+
+Number of simulations (e.g. 3,000)
+
+Volume volatility [%]
+
+Price volatility [%]
+
+Run the simulation to see histograms of:
+
+Simulated IRR
+
+Simulated NPV
+
+This helps you answer questions like:
+
+“What’s the probability that IRR falls below X %?”
+
+“What’s the NPV at the 5th / 50th / 95th percentile?”
+
+3. Practical tips
+
+Change one assumption block at a time so you can feel the sensitivity (volumes vs prices vs fixed costs).
+
+Save scenario settings (e.g. in a separate note) so you can recreate “Scenario A, B, C”.
+
+If numbers look crazy: check for a zero volume or zero price first – the usual suspects 😄
